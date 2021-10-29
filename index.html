@@ -27,53 +27,63 @@
           />
         </div>
 
-        <h1>Sergio Lima</h1>
-        <a href="https://github.com/sergio-slima">
+        <h1 id="userName">Sergio Lima</h1>
+        <a href="https://github.com/sergio-slima" target="_blank">
           <img src="images/github.svg" alt="ícone github" />
           sergio-slima</a
         >
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p>Analista de sistema focado em programação web</p>
 
-        <ul>
-          <li>
-            <a href="https://www.youtube.com/channel/UCQUUSF4-DdDX80IJZ8ZggNg">
-              <img
-                src="images/youtube.svg"
-                alt="ícone youtube"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a
+              href="https://youtube.com/channel/UCQUUSF4-DdDX80IJZ8ZggNg"
+              target="_blank"
+            >
+              <img src="images/youtube.svg" alt="ícone youtube" />
             </a>
           </li>
-          <li>
-            <a href="https://facebook.com/sergio.silvalima/">
-              <img
-                src="images/facebook.svg"
-                alt="ícone facebook"
-                target="_blank"
-              />
+          <li class="facebook">
+            <a href="https://facebook.com/maykbrito/" target="_blank">
+              <img src="images/facebook.svg" alt="ícone facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://instagram.com/sergio_silva_/">
-              <img
-                src="images/instagram.svg"
-                alt="ícone instagram"
-                target="_blank"
-              />
+          <li class="instagram">
+            <a href="https://instagram.com/maykbrito/" target="_blank">
+              <img src="images/instagram.svg" alt="ícone instagram" />
             </a>
           </li>
-          <li>
-            <a href="https://www.linkedin.com/in/sergio-silva-lima-b99237140/">
-              <img
-                src="images/twitter.svg"
-                alt="ícone twitter"
-                target="_blank"
-              />
+          <li class="linkedin">
+            <a
+              href="https://linkedin.com/in/sergio-silva-lima-b99237140/"
+              target="_blank"
+            >
+              <img src="images/twitter.svg" alt="ícone twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const linksSocialMedia = {
+        youtube: 'channel/UCQUUSF4-DdDX80IJZ8ZggNg',
+        facebook: 'sergio.silvalima',
+        instagram: 'sergio_silva_',
+        linkedin: 'in/sergio-silva-lima-b99237140/'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+          //alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
