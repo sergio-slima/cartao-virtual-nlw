@@ -24,16 +24,17 @@
           <img
             src="https://avatars.githubusercontent.com/u/48762187?s=400&u=731b180a560d7929afac74cb15f55b063949eaf0&v=4"
             alt="Foto pessoal"
+            id="userImage"
           />
         </div>
 
         <h1 id="userName">Sergio Lima</h1>
-        <a href="https://github.com/sergio-slima" target="_blank">
+        <a href="https://github.com/sergio-slima" target="_blank" id="userLink">
           <img src="images/github.svg" alt="ícone github" />
-          sergio-slima</a
+          <span id="userLogin">sergio-slima</span></a
         >
 
-        <p>Analista de sistema focado em programação web</p>
+        <p id="userBio">Analista de sistema iniciando em programação web</p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -66,24 +67,6 @@
       </div>
     </main>
 
-    <script>
-      const linksSocialMedia = {
-        youtube: 'channel/UCQUUSF4-DdDX80IJZ8ZggNg',
-        facebook: 'sergio.silvalima',
-        instagram: 'sergio_silva_',
-        linkedin: 'in/sergio-silva-lima-b99237140/'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-          //alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
