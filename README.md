@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="/img/XDbv-logo.png" alt="Logo" height="100" width="100">  
+  <img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/48762187?v=4" width="100px;" alt="Sergio SLima"/> 
   <p>Cartão Virtual</p>
 </h1>
 
